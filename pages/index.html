@@ -1,0 +1,68 @@
+---
+layout: base
+permalink: /
+---
+
+<header>
+  <img src='{{ site.baseurl }}/assets/images/logo.svg' />
+  <nav role='navigation'>
+    <ul>
+      <li><a href='{{ site.baseurl }}/content'>Ｃontent</a></li>
+      &bull;
+      <li><a href='{{ site.baseurl }}/updates'>Ｕpdates</a></li>
+      &bull;
+      <li><a href='{{ site.baseurl }}/about'>Ａbout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<ul class='videos'>
+  {% assign videos = site.content | reverse %}
+  {% for video in videos | limit: 3 %}
+  <li>
+    <a href='{{ site.baseurl }}{{ video.url }}'>
+      <h3>{{ video.title }}</h3>
+      <time>{{ video.date | date: '%d %B %Y'}}</time>
+      <img src='https://inksacked.gq/media/thumb/{{ video.thumbnail_file }}' />
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<nav>
+  <ul>
+	{% if site.facebook != nil %}
+    <li>
+      <a href='{{ site.facebook }}' target='_blank'>
+      <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+	{% endif %}
+	{% if site.instagram != nil %}
+    <li>
+      <a href='{{ site.instagram }}' target='_blank'>
+      <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+	{% endif %}
+	{% if site.twitter != nil %}
+    <li>
+      <a href='{{ site.twitter }}' target='_blank'>
+      <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+	{% endif %}
+	{% if site.youtube != nil %}
+    <li>
+      <a href='{{ site.youtube }}' target='_blank'>
+      <i class="fab fa-youtube"></i>
+      </a>
+    </li>
+	{% endif %}
+    <li>
+      <a href='{{ site.baseurl }}/feed.xml' target='_blank'>
+      <i class="fas fa-rss-square"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

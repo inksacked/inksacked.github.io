@@ -1,0 +1,72 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+	<body>
+		{% include navigation.html %}
+
+		{% if page.profile %}
+		{% include profile.html %}
+		{% endif %}
+		<main>
+			{{ content }}
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+	    <script src="{{ site.baseurl }}/assets/js/highlight.js"></script>
+	    <!--<script src="{{ site.baseurl }}/assets/js/readapi_automator.js"></script>-->
+	    <script>hljs.initHighlightingOnLoad();</script>
+	    <script src="https://inksacked.gq/assets/jQueryEmoji.js"></script>
+	    <script src="https://inksacked.gq/assets/kappa.js"></script>
+	    <script>
+		  	$(document).ready(function() {
+		  	  $('.h-entry').kappa();
+		  	});
+	    </script>
+	    <script>
+		  	//$(document).ready(function() {
+				$('p').Emoji({
+					path:  'https://inksacked.gq/assets/images/emojione/',
+					class: 'emoji',
+					ext:   'png'
+				});
+				$('h1').Emoji({
+					path:  'https://inksacked.gq/assets/images/emojione/',
+					class: 'emoji',
+					ext:   'png'
+				});
+				$('h2').Emoji({
+					path:  'https://inksacked.gq/assets/images/emojione/',
+					class: 'emoji',
+					ext:   'png'
+				});
+				$('h3').Emoji({
+					path:  'https://inksacked.gq/assets/images/emojione/',
+					class: 'emoji',
+					ext:   'png'
+				});
+				$('h4').Emoji({
+					path:  'https://inksacked.gq/assets/images/emojione/',
+					class: 'emoji',
+					ext:   'png'
+				});
+				$('h5').Emoji({
+					path:  'https://inksacked.gq/assets/images/emojione/',
+					class: 'emoji',
+					ext:   'png'
+				});
+				$('h6').Emoji({
+					path:  'https://inksacked.gq/assets/images/emojione/',
+					class: 'emoji',
+					ext:   'png'
+				});
+			//});
+	    </script>
+ 		{% include footer.html %}
+ 		<script src='{{ site.baseurl }}/assets/app.js'></script>
+	</body>
+</html>

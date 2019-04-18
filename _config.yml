@@ -1,0 +1,53 @@
+name: Inksacked
+description: Quality content, baby!
+url: 'https://inksacked.gq'
+baseurl: '/'
+timezone: "America/New_York"
+email: em@emsa.cf
+twitter: https://twitter.com/inksacked/
+youtube: https://www.youtube.com/inksacked/
+instagram: https://instagram.com/inksacked/
+#facebook: 
+markdown: "kramdown"
+permalink: "/:year/:month/:day/:title.html"
+relative_permalinks: false
+#google_analytics: 'UA-00000000-1'
+
+################################################################
+################################################################
+gems:
+  - jekyll-sitemap
+sass:
+  sass_dir: /assets/_sass
+  style: :compressed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - .gitignore
+collections:
+  content:
+    output: true
+    permalink: /:year/:month/:day/:title/
+defaults:
+  -
+    scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      path: ''
+      type: content
+    values:
+      layout: video
+      
+aboutPage: true
+
+# - markdown: redcarpet
+highlighter: rouge
+#google_analytics: ''
+disqus: false
+#disqus_short - name: ''
+commento: false

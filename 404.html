@@ -1,0 +1,80 @@
+---
+permalink: /404.html
+---
+<style>
+    
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.active {
+  cursor: default;
+  text-decoration: none;
+}     
+    
+body {
+	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #666;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+}
+
+h1 {
+	font-size: 30px;
+	letter-spacing: -1px;
+	color: #222;
+	font-weight: bold;
+}
+
+h2 {
+	font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #aaa;
+}
+</style>
+
+<head>
+    
+<title>Get out! Scram!</title>
+
+</head>
+
+<body class="centered">
+<h1 class="active" style="
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center
+    margin:0 auto;
+    "><a class="active" href="/m">Oh no...</a></h1>
+    <br>
+<h2 style="
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center
+    margin:0 auto;"><p>Either something's gone [wrong] or you're a little dumb kid, ain'tcha? Well … ain'tcha‽ Just <a href="/m">get outta here!</a></p></h2>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    
+<script>
+var colors = ['#222', '#666', 'rgb(255,59,48)', 'rgb(255,149,0)', 'rgb(255,204,0)', 'rgb(76,217,100)', 'rgb(90,200,250)', 'rgb(0,122,255)', 'rgb(88,86,214)', 'rgb(255,45,85)'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+$('a:link, a:visited, a:hover, a:active').css('color', randomColor);
+</script>
+    
+</body>
+<!--
+R rgb(255,59,48)
+O rgb(255,149,0)
+Y rgb(255,204,0)
+G rgb(76,217,100)
+TB rgb(90,200,250)
+B rgb(0,122,255)
+PU rgb(88,86,214)
+PI rgb(255,45,85)
+-->

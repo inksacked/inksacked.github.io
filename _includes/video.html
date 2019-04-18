@@ -1,0 +1,97 @@
+<!-- Uses the plyr.io HTML5 player -->
+<script src="https://cdn.plyr.io/2.0.15/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/2.0.15/plyr.css">
+<script>
+document.addEventListener('DOMContentLoaded', () => { 
+  // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player = new Plyr('#video');
+
+  // Bind event listener
+  function on(selector, type, callback) {
+    document.querySelector(selector).addEventListener(type, callback, false);
+  }
+
+  // Play
+  on('.js-play', 'click', () => { 
+    player.play();
+  });
+
+  // Pause
+  on('.js-pause', 'click', () => { 
+    player.pause();
+  });
+
+  // Stop
+  on('.js-stop', 'click', () => { 
+    player.stop();
+  });
+
+  // Rewind
+  on('.js-rewind', 'click', () => { 
+    player.rewind();
+  });
+
+  // Forward
+  on('.js-forward', 'click', () => { 
+    player.forward();
+  });
+});
+plyr.setup("#video");
+</script>
+<style>
+  .container {
+  max-width: 430px;
+  max-height: 315px;
+  }
+  #video {
+  max-width: 430px;
+  max-height: 315px;
+  }
+</style>
+<div class="container">
+<video controls crossorigin playsinline id="video">
+                <!-- Video files -->
+                <source src="{{ include.video }}" type="video/mp4">
+
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="{{ include.video }}"</a>
+            </video>
+	<!-- Progressbar by Matthew Wrayfield (http://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/) -->
+	<script>
+	var e = ['🌑', '🌘', '🌗', '🌖', '🌕'],
+			video;
+
+		function formatTime(seconds) {
+			var minutes = Math.floor(seconds/60),
+				seconds = Math.floor(seconds - (minutes*60));
+
+			return ('0'+minutes).substr(-2) + ':' + ('0'+seconds).substr(-2);
+		}
+
+		function renderProgressBar() {
+			var s = '',
+				c = 0,
+				l = 10,
+				p = Math.floor(video.currentTime / video.duration * ((l*5)-1)),
+				i;
+
+			while (p >= 5) {
+				s += e[4];
+				c ++;
+				p -= 5;
+			}
+			s += e[p];
+			c ++;
+
+			while (c < l) {
+				s += e[0];
+				c ++;
+			}
+
+			location.hash = s+formatTime(video.currentTime)+'╱'+formatTime(video.duration);
+		}
+
+		video = document.getElementById('video');
+		video.addEventListener('timeupdate', renderProgressBar);
+	</script>
+</div>
