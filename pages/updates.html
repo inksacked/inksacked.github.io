@@ -15,8 +15,7 @@ permalink: /updates/
 		<time>{{ post.date | date: '%d %B %Y'}}</time>
 		<p>{{ post.content | strip_html | truncatewords: 30 }}</p>
 	{% endif %}
-    <!-- </a> -->
-	<a href="{{ site.baseurl }}/{{ post.url | remove_first: '/' | remove: '.html' }}" class="u-url"><aside class="dates"><time datetime="{{ post.date }}" class="dt-published"><span class="arrow">→</span> {{ post.date | date:"%I:%M %p, %b %d" }}</time></aside></a>
+    </a>
   </li>
   {% endfor %}
 </ul>
