@@ -3,18 +3,7 @@ layout: base
 permalink: /
 ---
 
-<header>
-  <img src='{{ site.baseurl }}/assets/images/logo.svg' />
-  <nav role='navigation'>
-    <ul>
-      <li><a href='{{ site.baseurl }}/content'>Content</a></li>
-      &bull;
-      <li><a href='{{ site.baseurl }}/updates'>Updates</a></li>
-      &bull;
-      <li><a href='{{ site.baseurl }}/about'>About</a></li>
-    </ul>
-  </nav>
-</header>
+{% include header.html %}
 
 <ul class='videos'>
   {% assign videos = site.content | reverse %}

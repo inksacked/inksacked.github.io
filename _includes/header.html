@@ -1,0 +1,22 @@
+<header>
+  {% if page.url == "/" %}
+  <img src='{{ site.baseurl }}/assets/images/logo.svg' />
+  {% else %}
+  <a href='{{ site.baseurl }}/' class='home'>
+  <img src='{{ site.baseurl }}/assets/images/logo.svg' />
+  </a>
+  <nav role='navigation'>
+    <ul>
+	  {% if page.url != "/content" %}
+      <li><a href='{{ site.baseurl }}/content'>Content</a></li>
+      &bull;
+	  {% endif %}
+	  {% if page.url != "/updates" %}
+      <li><a href='{{ site.baseurl }}/updates'>Updates</a></li>
+      &bull;
+	  {% endif %}
+	  {% if page.url != "/about" %}
+      <li><a href='{{ site.baseurl }}/about'>About</a></li>
+    </ul>
+  </nav>
+</header>
