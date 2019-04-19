@@ -1,0 +1,57 @@
+<html>
+  <style>
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .active {
+    cursor: default;
+    text-decoration: none;
+  }     
+  body {
+    font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #666;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+  }
+  h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+    color: #222;
+    font-weight: bold;
+  }
+  h2 {
+    font: normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
+      color: #aaa;
+  }
+  </style>
+  <head>
+    <title>
+      Inksacked
+    </title>
+    <link rel="icon" href="fav.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="centered">
+      <h1 class="active" style="text-align:center; display:flex; justify-content:center; align-items:center; margin:0 auto;">
+        <a class="active" href="https://github.com/inksacked/inksacked.github.io">
+          Work in progress!
+        </a>
+      </h1>
+      <h2 style="text-align:center; display:flex; justify-content:center; align-items:center; margin:0 auto;">
+        <p>
+          It'll be done when it's done.
+        </p>
+      </h2>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script>
+    var colors = ['#222', '#666', 'rgb(255,59,48)', 'rgb(255,149,0)', 'rgb(255,204,0)', 'rgb(76,217,100)', 'rgb(90,200,250)', 'rgb(0,122,255)', 'rgb(88,86,214)', 'rgb(255,45,85)'];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    $('a:link, a:visited, a:hover, a:active').css('color', randomColor);
+    </script>
+  </body>
+</html>

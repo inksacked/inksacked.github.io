@@ -1,0 +1,17 @@
+---
+permalink: "/content/"
+layout: default
+---
+
+<ul class='videos'>
+  {% for video in site.content reversed %}
+  <li>
+    <a href='{{ site.baseurl }}/{{ video.url }}'>
+      <h3>{{ video.title }}</h3>
+      <time>{{ video.date | date: '%d %B %Y'}}</time>
+      <img src='https://inksacked.gq/media/thumb/{{ video.thumbnail_file }}' />
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+

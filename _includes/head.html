@@ -1,0 +1,62 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name='description' content='{{ site.description }}' />
+  <link rel='canonical'
+        href='{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}'>
+
+{% if page.url == "/" %}
+  <title>{{ site.name }}</title>
+{% endif %}
+{% if page.title != '' %}
+  <title>{{ site.name }} - {{ page.title }}</title>
+{% endif %}
+{% if page.sum != nil %}
+  <title>{{ site.name }} - {{ page.sum }}</title>
+{% endif %}
+{% if page.sum == nil and page.title == '' %}
+  <title>{{ site.name }} - {{ page.excerpt | strip_html }}</title>
+{% endif %}
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/highlight.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css">
+  <link rel='stylesheet' type='text/css' href='{{ site.baseurl }}/assets/app.css' />
+  <link href='//fonts.googleapis.com/css?family=Poppins' rel='stylesheet' type='text/css'>
+
+  <link rel="pingback" href="https://webmention.io/inksacked.gq/xmlrpc" />
+  <link rel="webmention" href="https://webmention.io/inksacked.gq/webmention" />
+  <meta name="google-site-verification" content="_HMjBmXaR3Vj53nFYOUETYbvwqegXKSOeq_3_vmbq3g" />
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138657298-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', '{{ site.google_analytics }}');
+	</script>
+
+  
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="EditURI" type="application/rsd+xml" href="{{ site.baseurl }}/rsd.xml" />
+
+  {% if site.twitter_username != "" %}
+  	<link href="https://twitter.com/{{ site.twitter_username }}" rel="me" />
+  {% endif %}
+  {% if site.github_username != "" %}
+  	<link href="https://github.com/{{ site.github_username }}" rel="me" />
+  {% endif %}
+  {% if site.instagram_username != "" %}
+  	<link href="https://instagram.com/{{ site.instagram_username }}" rel="me" />
+  {% endif %}
+  <link href="mailto:{{ site.email }}" rel="me" />
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+  <link rel="micropub" href="https://inksacked-micropub.herokuapp.com/micropub/main" />
+  <link rel="media-endpoint" href="https://inksacked-micropub.herokuapp.com/micropub/main/media" />
+</head>

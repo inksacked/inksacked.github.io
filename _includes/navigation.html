@@ -1,0 +1,26 @@
+<nav class="main-nav">
+    {% if page.url != "/" %}
+        <a href="{{ site.url }}/"> <span class="arrow">←</span> Home </a>
+    {% endif %}
+	
+	{% if page.url != "/about" %}
+        <a href="{{ site.url }}/about"> <span class="arrow">←</span> About </a>
+    {% endif %}
+	
+	{% if page.url != "/content" %}
+        <a href="{{ site.url }}/content"> <span class="arrow">←</span> Content </a>
+    {% endif %}
+	
+	{% if page.url != "/updates" %}
+        <a href="{{ site.url }}/updates"> <span class="arrow">←</span> Updates </a>
+    {% endif %}
+
+	{% assign sorted_pages = site.pages | sort: "order" %}
+	{% for page in sorted_pages %}
+		{% if page.title %}
+			<a class="page-link" href="{{ page.url | prepend: site.url }}">{{ page.title }}</a>
+		{% endif %}
+	{% endfor %}
+		
+    <a class="cta" href="{{ site.youtube }}?sub_confirmation=1">Subscribe</a>
+</nav>

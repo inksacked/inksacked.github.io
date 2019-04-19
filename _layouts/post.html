@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article itemscope itemtype='http://schema.org/BlogPosting'>
+	<header>
+	{% if page.microblog == false %}
+	  <h2 itemprop='headline'>{{ page.title }}</h2>
+	{% endif %}
+	  <time itemprop='datePublished' content='{{ page.date }}'>
+	    {{ page.date | date: '%d %B'}}
+	  </time>
+	  <div>By: <span itemprop='author'>{{ page.author }}</span></div>
+	</header>
+	<section itemprop='articleBody'>
+  	{{ content }}
+  </section>
+  <section id="sharing">
+        {% include share.html %}
+    </section>
+	<!-- Disqus comments -->
+	{% if site.disqus %}
+		<div class="archive readmore">
+			<h3>Comments</h3>
+			{% include disqus.html %}
+		</div>
+	{% endif %}
+
+	<!-- Commento comments -->
+	{% if site.commento %}
+		<div class="archive readmore">
+			<h3>Comments</h3>
+			{% include commento.html %}
+		</div>
+	{% endif %}
+</article>
