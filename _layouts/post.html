@@ -13,7 +13,9 @@ layout: default
 	  <div>By: <span itemprop='author'>{{ page.author }}</span></div>
 	</header>
 	<section itemprop='articleBody'>
+  	<div class="contents">
   	{{ content }}
+	</div>
   </section>
   <section id="sharing">
         {% include share.html %}
