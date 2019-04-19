@@ -1,7 +1,7 @@
 <header>
   {% if page.url == "/" %}
   <img src='{{ site.url }}/assets/images/logo.svg' />
-  {% elseif  page.url != "/" %}
+  {% else %}
   <a href='{{ site.url }}/' class='home'>
   <img src='{{ site.url }}/assets/images/logo.svg' />
   </a>
