@@ -11,7 +11,7 @@ instagram: https://instagram.com/inksacked/
 markdown: "kramdown"
 permalink: "/:year/:month/:day/:title.html"
 relative_permalinks: false
-#google_analytics: 'UA-00000000-1'
+google_analytics: 'UA-138657298-1'
 
 ################################################################
 ################################################################

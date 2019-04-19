@@ -30,6 +30,17 @@
   <link rel="webmention" href="https://webmention.io/inksacked.gq/webmention" />
   <meta name="google-site-verification" content="_HMjBmXaR3Vj53nFYOUETYbvwqegXKSOeq_3_vmbq3g" />
   
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138657298-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', '{{ site.google_analytics }}');
+	</script>
+
+  
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="EditURI" type="application/rsd+xml" href="{{ site.baseurl }}/rsd.xml" />
