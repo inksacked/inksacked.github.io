@@ -1,8 +1,32 @@
+---
+title: Inksacked.Github.Io
+timezone: America/New_York
+collections:
+  content:
+    title: Content
+    output: true
+    permalink: "/:year/:month/:day/:title/"
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''
+    type: content
+  values:
+    layout: video
 name: Inksacked
 description: Quality content, baby!
-url: 'https://inksacked.gq'
-baseurl: '/'
-timezone: "America/New_York"
+url: https://inksacked.gq
+baseurl: "/"
 email: inksacked@gmail.com
 twitter: https://twitter.com/inksacked/
 youtube: https://www.youtube.com/channel/UCyqVQSpn1M2c_NoCWvQP4Xw
@@ -10,47 +34,21 @@ instagram: https://instagram.com/inksacked/
 twitter_username: inksacked
 github_username: inksacked
 instagram_username: inksacked
-#facebook: 
-markdown: "kramdown"
+markdown: kramdown
 permalink: "/:year/:month/:day/:title.html"
 relative_permalinks: false
-google_analytics: 'UA-138657298-1'
-
-################################################################
-################################################################
+google_analytics: UA-138657298-1
 gems:
-  - jekyll-sitemap
+- jekyll-sitemap
 sass:
-  sass_dir: /assets/_sass
+  sass_dir: "/assets/_sass"
   style: :compressed
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - CNAME
-  - .gitignore
-collections:
-  content:
-    output: true
-    permalink: /:year/:month/:day/:title/
-defaults:
-  -
-    scope:
-      path: ''
-      type: posts
-    values:
-      layout: post
-  -
-    scope:
-      path: ''
-      type: content
-    values:
-      layout: video
-      
+- Gemfile
+- Gemfile.lock
+- CNAME
+- ".gitignore"
 aboutPage: true
-
-# - markdown: redcarpet
 highlighter: rouge
-#google_analytics: ''
 disqus: false
-#disqus_short - name: ''
 commento: false
