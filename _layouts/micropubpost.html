@@ -5,9 +5,9 @@ layout: default
 <article itemscope itemtype='http://schema.org/BlogPosting'>
 	<header>
 	  <time itemprop='datePublished' content='{{ page.date }}'>
-	    {{ page.date | date: '%d %B'}}
+	    {{ page.date | date: '%d %B %Y'}}
 	  </time>
-	  {% if page.microblog != null %}
+	  {% if page.author != nil %}
 	  <div>By: <span itemprop='author'>{{ page.author }}</span></div>
 	  {% else %}
 	  <div><span itemprop='author'>{{ page.author }}</span></div>
