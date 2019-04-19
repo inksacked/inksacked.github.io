@@ -46,14 +46,15 @@
   <link rel="EditURI" type="application/rsd+xml" href="{{ site.baseurl }}/rsd.xml" />
 
   {% if site.twitter_username != "" %}
-  	<link rel="me" href="https://twitter.com/{{ site.twitter_username }}" />
+  	<link href="https://twitter.com/{{ site.twitter_username }}" rel="me" />
   {% endif %}
   {% if site.github_username != "" %}
-  	<link rel="me" href="https://github.com/{{ site.github_username }}" />
+  	<link href="https://github.com/{{ site.github_username }}" rel="me" />
   {% endif %}
   {% if site.instagram_username != "" %}
-  	<link rel="me" href="https://instagram.com/{{ site.instagram_username }}" />
+  	<link href="https://instagram.com/{{ site.instagram_username }}" rel="me" />
   {% endif %}
+  <link href="mailto:{{ site.email }}" rel="me" />
   <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
   <link rel="micropub" href="https://inksacked-micropub.herokuapp.com/micropub/main" />
