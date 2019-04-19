@@ -59,4 +59,19 @@
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
   <link rel="micropub" href="https://inksacked-micropub.herokuapp.com/micropub/main" />
   <link rel="media-endpoint" href="https://inksacked-micropub.herokuapp.com/micropub/main/media" />
+  
+  <script>
+  (function(){
+  var handle = '{{ site.twitter_username }}';
+  var a = document.createElement('script');
+  var m = document.getElementsByTagName('script')[0];
+  a.async = 1;
+  a.src = 'https://nectar.ninja/api/v1/' + handle.slice(1);
+  m.parentNode.insertBefore(a, m);
+  })();
+  </script>
+  
+  <script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.0/pace.min.js"></script>
+  <script src="https://raw.github.com/kellym/smartquotesjs/master/smartquotes.js"></script>
+  <script>smartquotes();</script>
 </head>
