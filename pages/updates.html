@@ -10,10 +10,14 @@ layout: default
 	{% if page.microblog == false %}
 		<h3>{{ post.title }}</h3>
 		<time>{{ post.date | date: '%d %B %Y'}}</time>
-		<p>{{ post.content | truncatewords: 30 }}</p>
+		<div class="contents">
+			<p>{{ post.content | truncatewords: 30 }}</p>
+		</div>
 	{% else %}
 		<time>{{ post.date | date: '%d %B %Y'}}</time>
-		<p>{{ post.content | truncatewords: 30 }}</p>
+		<div class="contents">
+			<p>{{ post.content | truncatewords: 30 }}</p>
+		</div>
 	{% endif %}
     </a>
   </li>
