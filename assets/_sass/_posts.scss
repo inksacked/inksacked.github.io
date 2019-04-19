@@ -2,18 +2,23 @@
   padding: 0 10%;
 }
 
-.posts .li {
+.posts li {
   display: block;
   padding: 5%;
   margin: 5%;
   transition: all 0.3s ease;
 }
 
-.post .a {
+.posts .a {
   color: #333;
 }
 
-.posts .li:hover {
+.posts li:hover {
   background: #ffe6f2;
   border-radius: 10px;
+}
+
+.posts img {
+  width: 100%;
+  height: 100%;
 }
