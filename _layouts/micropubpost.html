@@ -7,7 +7,7 @@ layout: default
 	  <time itemprop='datePublished' content='{{ page.date }}'>
 	    {{ page.date | date: '%d %B'}}
 	  </time>
-	  {% if page.microblog == nil %}
+	  {% if page.microblog != null %}
 	  <div>By: <span itemprop='author'>{{ page.author }}</span></div>
 	  {% else %}
 	  <div><span itemprop='author'>{{ page.author }}</span></div>
