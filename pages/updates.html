@@ -12,7 +12,6 @@ layout: default
 		<time>{{ post.date | date: '%d %B %Y'}}</time>
 		<p>{{ post.content | truncatewords: 30 }}</p>
 	{% else %}
-		{% include insta.html %}
 		<time>{{ post.date | date: '%d %B %Y'}}</time>
 		<p>{{ post.content | truncatewords: 30 }}</p>
 	{% endif %}
