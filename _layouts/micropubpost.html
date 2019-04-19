@@ -7,7 +7,11 @@ layout: default
 	  <time itemprop='datePublished' content='{{ page.date }}'>
 	    {{ page.date | date: '%d %B'}}
 	  </time>
+	  {% if page.microblog == nil %}
+	  <div>By: <span itemprop='author'>{{ page.author }}</span></div>
+	  {% else %}
 	  <div><span itemprop='author'>{{ page.author }}</span></div>
+	  {% endif %}
 	</header>
 	<section itemprop='articleBody'>
   	{{ content }}
